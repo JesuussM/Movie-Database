@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");</style>
+    <script src="https://kit.fontawesome.com/8a01ab3b93.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Lookup</title>
+</head>
+<body>
+    <div id="titleBox">Movie Database</div>
+    <div id="footerBox">by Jesus</div>
+    <div id="searchBox">
+        <input type="text" id="searchInput" onkeydown="checkKey(event)" placeholder="Search for a movie">
+        <button id="searchButton" onclick="retrieveData()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button id="randomButton" onclick="notReallyRandom()"><i class="fa-solid fa-dice"></i> Random Movie to Watch</button>
+    </div>
+    <div id="resultsContainer">
+    <div id="resultsBox" onclick="toggleHidden()">
+        <div id="posterBox"><img id="poster" src=""></div>
+        <div id="infoBox">
+            <div id="nameBox"></div>
+            <div id="yearStarsBox">
+                <div id="yearBox"></div>
+                <div id="starsBox"></i></div>
+            </div>
+            <div id="ratingBox"></div>
+            <div id="genreBox"></div>
+            <div id="seeMoreBox"></div>
+        </div>
+        <div id="hiddenInfo">
+            <div id="plotBox"></div>
+            <div id="trailerImdbBox">
+                <div id="trailerBox"></div>
+                <div id="imdbBox"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

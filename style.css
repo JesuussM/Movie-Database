@@ -1,0 +1,252 @@
+body {
+    background-color: #212121;
+    color: #e8e8e8;
+    overflow: auto;
+  }
+
+#titleBox {
+    font-family: "Poppins", sans-serif;
+    font-size: xx-large;
+    padding-top: 50px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#footerBox {
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #e8e8e8;
+}
+
+#searchBox {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#searchBox > input {
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: medium;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #212121;
+    color: #e8e8e8;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+#searchBox > input:hover {
+    background-color: #e8e8e8;
+    color: #212121
+}
+
+#searchBox > #searchButton {
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: medium;
+    background-color: #212121;
+    color: #e8e8e8;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+#searchBox > #randomButton {
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 100px;
+    font-size: medium;
+    background-color: #212121;
+    color: #e8e8e8;
+    transition: 0.3s;
+}
+
+#searchBox > #searchButton:hover {
+    background-color: #e8e8e8;
+    color: #212121;
+}
+
+#searchBox > #randomButton:hover {
+    background-color: #e8e8e8;
+    color: #212121;
+}
+
+#searchBox > #searchButton:active{
+    transform: translateY(2px);
+}
+
+#randomButton:active {
+    transform: translateY(2px);
+}
+
+#resultsBox {
+    display:none;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 50px;
+    min-width: 25%;
+    width: 700px;
+    min-height: 25%;
+    height: fit-content;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 40px;
+    padding-bottom: 10px;
+    background: rgba(24, 20, 20, 0.987);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* grid-template-rows: auto auto; */
+    transition: height 1s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+#resultsBox:hover {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+}
+
+/* Delete when done formatting */
+/* #resultsBox > div{
+    border: 1px solid #e8e8e8;
+    
+} */
+
+/* Delete when done formatting */
+/* #infoBox> div{
+    border: 1px solid #e8e8e8;
+    
+} */
+
+#resultsBox > #posterBox {
+    /* grid-column: 1; */
+    height: 300px;
+    width: 200px;
+}
+
+#posterBox img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#infoBox {
+    /* grid-column: 2; */
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* #nameBox, #yearBox, #starsBox, #ratingBox, #genreBox {
+    grid-column: 2;
+} */
+
+#nameBox {
+    font-size: xx-large;
+    font-weight: bold;
+    height:fit-content;
+    padding-bottom: 10px;
+}
+
+#yearStarsBox {
+    display: flex;
+    justify-content:space-around;
+    padding-bottom: 10px;
+}
+
+#yearBox {
+    font-size: medium;
+    font-weight: 100;
+}
+
+#starsBox {
+    font-size: medium;
+    font-weight: 100;
+}
+
+#ratingBox {
+    font-size: medium;
+    font-weight: 100;
+    padding-bottom: 10px;
+}
+
+#seeMoreBox {
+    /* display: none; */
+    display:block;
+    padding-top: 14%;
+    color:#c2c2c2
+}
+
+#hiddenInfo {
+    display: none;
+    grid-column: 1 / span 2;
+    width: 100%;
+    font-size: medium;
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+#hiddenInfo > #plotBox {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* #hiddenInfo > div {
+    border: 1px solid #e8e8e8;
+} */
+
+#trailerImdbBox {
+    padding-top: 10px;
+    display: flex;
+    justify-content:space-around;
+    padding-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #969696;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #e8e8e8;
+}
+
+@media screen and (max-width: 600px) {
+    #titleBox {
+        padding-top: 20px;
+        font-size: x-large;
+    }
+    #searchBox > input {
+        width: 50%;
+        font-size: small;
+    }
+
+    #searchBox > #randomButton {
+        width: 100%;
+        margin-left: 0;
+        font-size: small;
+    }
+
+    #resultsBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 85%;
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    #trailerImdbBox {
+        padding-bottom: 20px;
+        font-size: 0.7em;
+    }
+}
